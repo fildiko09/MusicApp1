@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+      <item
+          android:id="@+id/nav_topic"
+          android:icon="@drawable/ic_topic"
+          android:title="Topics" />
+      <item
+          android:id="@+id/nav_quiz"
+          android:icon="@drawable/ic_quiz"
+          android:title="Quizzes" />
+      <item
+          android:id="@+id/nav_question"
+          android:icon="@drawable/ic_menu_slideshow"
+          android:title="Questions" />
+      <item
+          android:id="@+id/nav_see_requests"
+          android:icon="@drawable/ic_menu_slideshow"
+          android:title="Requests" />
+    </group>
+  </menu>

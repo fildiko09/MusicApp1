@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">MusicLearnApp</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Log out</string>
+    <string name="email_filler">Email</string>
+    <string name="password_filler">Password</string>
+    <string name="database_name">datab1.db3</string>
+    <string name="category_prompt">Choose a category</string>
+    <string name="topic_prompt">Choose a topic</string>
+    <string name="quiz_prompt">Choose a quiz</string>
+  <string name="res_see">Your score is 3/5</string>
+  <string name="sbmt">Next</string>
+    <string-array name="categories_array">
+      <item>history</item>
+      <item>artist</item>
+    </string-array>
+    <string-array name="categories_array2">
+      <item></item>
+      <item>history</item>
+      <item>artist</item>
+    </string-array>
+</resources>

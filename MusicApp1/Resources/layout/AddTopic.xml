@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">  
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">  
+        <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/login_top">  
+            <LinearLayout 
+                android:layout_width="match_parent" 
+                android:layout_height="wrap_content" 
+                android:orientation="vertical" 
+                android:layout_margin="30dp">  
+                <EditText 
+                    android:id="@+id/addTopicName" 
+                    android:layout_width="match_parent" 
+                    android:layout_height="wrap_content" 
+                    android:hint="topic name" 
+                    android:theme="@style/EditTextWhite" 
+                    android:inputType="text" />
+                <EditText 
+                    android:id="@+id/addTopicDescription" 
+                    android:layout_width="match_parent" 
+                    android:layout_height="wrap_content" 
+                    android:hint="information" 
+                    android:theme="@style/EditTextWhite" 
+                    android:inputType="textMultiLine"
+                    android:lines="5"
+                    android:gravity="top|start"
+                    android:maxLines="8"
+                    android:scrollbars="vertical"
+                    />
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip"
+                    android:text="@string/category_prompt"
+                    />
+                <Spinner
+                    android:id="@+id/selectCategory"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:prompt="@string/category_prompt"
+                />
+            </LinearLayout>
+        </FrameLayout>  
+        <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content" >  
+            <com.google.android.material.floatingactionbutton.FloatingActionButton android:id="@+id/btnSaveTopic" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="top" android:layout_marginStart="40dp" app:backgroundTint="#003157" app:srcCompat="@drawable/ic_right_arrow" /> </FrameLayout>  
+    </LinearLayout>  
+</RelativeLayout> 
