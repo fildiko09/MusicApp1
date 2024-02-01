@@ -41,14 +41,21 @@ namespace MusicApp1.Views
         {
             try
             {
-                int myPref = Preferences.Get("my_key", 0);
-                RequestTable table = new RequestTable();
-                table.requestDescription = txtReq.Text;
-                table.loginIdFK = myPref;
-                addRequestVM.AddRequest(table);
-                Toast.MakeText(this, "Request sent…", ToastLength.Long).Show();
-                Preferences.Set("user_view", "history");
-                StartActivity(typeof(MainActivity));
+                if (string.IsNullOrEmpty(txtReq.Text))
+                {
+                    Toast.MakeText(this, "Fields can't be empty", ToastLength.Long).Show();
+                }
+                else
+                {
+                    int myPref = Preferences.Get("my_key", 0);
+                    RequestTable table = new RequestTable();
+                    table.requestDescription = txtReq.Text;
+                    table.loginIdFK = myPref;
+                    addRequestVM.AddRequest(table);
+                    Toast.MakeText(this, "Request sent…", ToastLength.Long).Show();
+                    Preferences.Set("user_view", "history");
+                    StartActivity(typeof(MainActivity));
+                }
             }
             catch (Exception ex)
             {

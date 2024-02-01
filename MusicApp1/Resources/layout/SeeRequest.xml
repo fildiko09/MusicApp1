@@ -14,7 +14,7 @@
             </LinearLayout>
         </FrameLayout>  
         <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content" >  
-            <com.google.android.material.floatingactionbutton.FloatingActionButton android:id="@+id/btnBackReq" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="top" android:layout_marginStart="40dp" app:backgroundTint="#003157" app:srcCompat="@drawable/ic_right_arrow" />
+            <com.google.android.material.floatingactionbutton.FloatingActionButton android:id="@+id/btnBackReq" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="top" android:layout_marginStart="40dp" app:backgroundTint="#003157" app:srcCompat="@drawable/ic_arrow_back" />
             <com.google.android.material.floatingactionbutton.FloatingActionButton android:id="@+id/btnDeleteReq" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="top" android:layout_marginStart="300dp" app:backgroundTint="#003157" app:srcCompat="@drawable/ic_delete" />
         </FrameLayout>  
     </LinearLayout>  

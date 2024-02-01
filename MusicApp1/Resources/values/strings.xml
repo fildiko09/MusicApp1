@@ -9,7 +9,7 @@
     <string name="category_prompt">Choose a category</string>
     <string name="topic_prompt">Choose a topic</string>
     <string name="quiz_prompt">Choose a quiz</string>
-  <string name="res_see">Your score is 3/5</string>
+  <string name="password_hint">At least 8 characters, 1 upper-case, 1 lower-case, 1 number</string>
   <string name="sbmt">Next</string>
     <string-array name="categories_array">
       <item>history</item>

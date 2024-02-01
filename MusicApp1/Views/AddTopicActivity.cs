@@ -59,14 +59,21 @@ namespace MusicApp1.Views
         {
             try
             {
-                TopicTable table = new TopicTable();
-                //TopicBLL topic = new TopicBLL();
-                table.topicName = txtName.Text;
-                table.description = txtDescription.Text;
-                table.category = txtCategory;
-                addTopicVM.AddTopic(table);
-                Toast.MakeText(this, "Topic Added…", ToastLength.Long).Show();
-                StartActivity(typeof(AdminActivity));
+                if (string.IsNullOrEmpty(txtName.Text) || string.IsNullOrEmpty(txtDescription.Text))
+                {
+                    Toast.MakeText(this, "Fields can't be empty", ToastLength.Long).Show();
+                }
+                else 
+                {
+                    TopicTable table = new TopicTable();
+                    //TopicBLL topic = new TopicBLL();
+                    table.topicName = txtName.Text;
+                    table.description = txtDescription.Text;
+                    table.category = txtCategory;
+                    addTopicVM.AddTopic(table);
+                    Toast.MakeText(this, "Topic Added…", ToastLength.Long).Show();
+                    StartActivity(typeof(AdminActivity));
+                }
             }
             catch (Exception ex)
             {

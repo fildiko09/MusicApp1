@@ -57,12 +57,19 @@ namespace MusicApp1.Views
         {
             try
             {
-                QuizTable table = new QuizTable();
-                table.quizName = txtName.Text;
-                table.topicIdFK = idTopic;
-                addQuizVM.AddQuiz(table);
-                Toast.MakeText(this, "Quiz Added…", ToastLength.Long).Show();
-                StartActivity(typeof(AdminActivity));
+                if (string.IsNullOrEmpty(txtName.Text))
+                {
+                    Toast.MakeText(this, "Fields can't be empty", ToastLength.Long).Show();
+                }
+                else 
+                {
+                    QuizTable table = new QuizTable();
+                    table.quizName = txtName.Text;
+                    table.topicIdFK = idTopic;
+                    addQuizVM.AddQuiz(table);
+                    Toast.MakeText(this, "Quiz Added…", ToastLength.Long).Show();
+                    StartActivity(typeof(AdminActivity));
+                }
             }
             catch (Exception ex)
             {

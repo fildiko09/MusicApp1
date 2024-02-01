@@ -14,11 +14,11 @@
           android:title="Quizzes" />
       <item
           android:id="@+id/nav_question"
-          android:icon="@drawable/ic_menu_slideshow"
+          android:icon="@drawable/ic_question"
           android:title="Questions" />
       <item
           android:id="@+id/nav_see_requests"
-          android:icon="@drawable/ic_menu_slideshow"
+          android:icon="@drawable/ic_request"
           android:title="Requests" />
     </group>
   </menu>

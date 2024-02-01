@@ -6,6 +6,7 @@
                 <EditText android:id="@+id/regEmail" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Email" android:theme="@style/EditTextWhite" android:inputType="textEmailAddress" android:drawableLeft="@drawable/ic_lock" />
                 <EditText android:id="@+id/regUser" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="User Name" android:theme="@style/EditTextWhite" android:inputType="text" android:drawableLeft="@drawable/ic_person" />
                 <EditText android:id="@+id/regPassword" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Password" android:theme="@style/EditTextWhite" android:inputType="textPassword" android:drawableLeft="@drawable/ic_key" />
+                <TextView android:id="@+id/passHint" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/password_hint" android:visibility="invisible" android:textColor="@android:color/holo_red_dark"/>
                 <CheckBox
                     android:id="@+id/checkAdmin"
                     android:layout_width="match_parent"

@@ -129,21 +129,31 @@ namespace MusicApp1
 
                 Spinner spinner = FindViewById<Spinner>(Resource.Id.chooseQuizFK);
 
+                TextView choose = FindViewById<TextView>(Resource.Id.ChoseQuiz);
                 var btnGo = FindViewById<Button>(Resource.Id.button_go);
 
                 quizzes = userVM.GetQuizzesInTopic(selectItem.topicId);
                 items1 = (from o in quizzes select o.quizName).ToArray();
 
-                spinner.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(spinner_ItemSelected);
+                if (quizzes.Length == 0)
+                {
+                    spinner.Visibility = ViewStates.Invisible;
+                    btnGo.Visibility = ViewStates.Gone;
+                    choose.Visibility = ViewStates.Invisible;
+                }
+                else
+                {
+                    spinner.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(spinner_ItemSelected);
 
-                var adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleSpinnerItem, items1);
-                adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
-                spinner.Adapter = adapter;
+                    var adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleSpinnerItem, items1);
+                    adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
+                    spinner.Adapter = adapter;
 
-                iter = 0;
-                score = 0;
+                    iter = 0;
+                    score = 0;
 
-                btnGo.Click += go_Click;
+                    btnGo.Click += go_Click;
+                }
             }
             else if (myPref == "request")
             {

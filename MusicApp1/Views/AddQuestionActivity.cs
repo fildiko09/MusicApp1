@@ -65,16 +65,23 @@ namespace MusicApp1.Views
         {
             try
             {
-                QuestionTable table = new QuestionTable();
-                table.question = txtQuestion.Text;
-                table.answerA = txtAnswerA.Text;
-                table.answerB = txtAnswerB.Text;
-                table.answerC = txtAnswerC.Text;
-                table.correctAnswer = txtCorrectAnswer.Text;
-                table.quizIdFK = idQuiz;
-                addQuestionVM.AddQuestion(table);
-                Toast.MakeText(this, "Question Added…", ToastLength.Long).Show();
-                StartActivity(typeof(AdminActivity));
+                if (string.IsNullOrEmpty(txtQuestion.Text) || string.IsNullOrEmpty(txtAnswerA.Text) || string.IsNullOrEmpty(txtAnswerB.Text) || string.IsNullOrEmpty(txtAnswerC.Text) || string.IsNullOrEmpty(txtCorrectAnswer.Text))
+                {
+                    Toast.MakeText(this, "Fields can't be empty", ToastLength.Long).Show();
+                }
+                else
+                {
+                    QuestionTable table = new QuestionTable();
+                    table.question = txtQuestion.Text;
+                    table.answerA = txtAnswerA.Text;
+                    table.answerB = txtAnswerB.Text;
+                    table.answerC = txtAnswerC.Text;
+                    table.correctAnswer = txtCorrectAnswer.Text;
+                    table.quizIdFK = idQuiz;
+                    addQuestionVM.AddQuestion(table);
+                    Toast.MakeText(this, "Question Added…", ToastLength.Long).Show();
+                    StartActivity(typeof(AdminActivity));
+                }
             }
             catch (Exception ex)
             {

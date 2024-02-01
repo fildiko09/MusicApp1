@@ -20,5 +20,12 @@ namespace MusicApp1.ViewModels
         {
             loginBLL.AddLogin(login);
         }
+
+        public LoginTable[] GetAllLogin()
+        {
+            LoginTable[] users = new LoginTable[100];
+            users = loginBLL.GetLogins();
+            return users;
+        }
     }
 }

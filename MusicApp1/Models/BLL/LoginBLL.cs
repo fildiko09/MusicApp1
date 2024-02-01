@@ -50,5 +50,11 @@ namespace MusicApp1.Models.BLL
             var data11 = data.Where(x => x.id == id).FirstOrDefault();
             return data11;
         }
+
+        public LoginTable[] GetLogins()
+        {
+            var data = loginDAL.GetAllLogin();
+            return data.ToArray();
+        }
     }
 }
